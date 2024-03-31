@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.insideContainer}>
         <TextInput placeholder='Enter your goal' />
         <Button title='Create goal' />
       </View>
@@ -18,12 +18,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1, //this indicates that the container should expand to occupy all avaliable space
-    flexDirection: "row", //indicates whether the the elements will be laid out in a row or column
-                          //tells us if the main axis is top to bottom or left to right
-    alignItems: 'flex-start', //reflects how the elements are laid out in their axis
-    justifyContent: 'space-between', //reflects how the elements are laid out in their axis
+    // flexDirection: "row", //indicates whether the the elements will be laid out in a row or column
+    //tells us if the main axis is top to bottom or left to right
+    // alignItems: 'flex-start', //reflects how the elements are laid out in their axis
+    // justifyContent: 'space-between', //reflects how the elements are laid out in their axis
     // backgroundColor: '#fff',
     padding: 50
+  },
+  insideContainer: {
+    flex: 1,
+    flexDirection: "row",
   },
   text2: {
     color: "green",
